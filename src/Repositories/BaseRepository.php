@@ -3,7 +3,6 @@
 namespace Yormy\Repository\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
-use Mexion\BedrockCore\Repositories\Interfaces\BaseRepositoryInterface;
 
 class BaseRepository
 {
