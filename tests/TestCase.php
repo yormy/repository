@@ -2,12 +2,8 @@
 
 namespace Yormy\Repository\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
+use Orchestra\Testbench\TestCase as BaseTestCase;
 
-class TestCase extends Orchestra
+abstract class TestCase extends BaseTestCase
 {
-    public function setUp(): void
-    {
-        parent::setUp();
-    }
 }
