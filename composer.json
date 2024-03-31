@@ -20,7 +20,7 @@
         "laravel/framework": "^9|^10"
     },
     "require-dev": {
-        "yormy/dev-tools-laravel": "^1.0"
+        "yormy/dev-tools-laravel": "dev-master"
     },
     "autoload": {
         "psr-4": {
@@ -78,7 +78,10 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true

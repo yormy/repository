@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Yormy\Repository;
 
 use Illuminate\Support\ServiceProvider;
@@ -17,7 +19,7 @@ class RepositoryServiceProvider extends ServiceProvider
         //        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'xid');
     }
 
-    public function register()
+    public function register(): void
     {
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'repository');
     }
