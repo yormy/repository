@@ -1,8 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Yormy\Repository;
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -10,17 +11,16 @@ class RepositoryServiceProvider extends ServiceProvider
     public function boot(): void
     {
         if ($this->app->runningInConsole()) {
-//            $this->publishes([
-//                __DIR__ . '/../config/config.php' => config_path('xid.php'),
-//            ], 'config');
+            //            $this->publishes([
+            //                __DIR__ . '/../config/config.php' => config_path('xid.php'),
+            //            ], 'config');
         }
 
-//        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'xid');
+        //        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'xid');
     }
 
-
-    public function register()
+    public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'repository');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'repository');
     }
 }

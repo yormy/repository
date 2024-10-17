@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Yormy\Repository\Repositories\Traits;
 
@@ -7,15 +9,14 @@ use Illuminate\Database\Eloquent\Model;
 
 trait Read
 {
-    public function all(array $columns = array('*'), string $orderBy = null, string $sortBy = 'asc'): Collection
+    public function all(array $columns = ['*'], ?string $orderBy = null, string $sortBy = 'asc'): Collection
     {
-        if (!$orderBy) {
-            $orderBy = $this->model->getTable() . ".id";
+        if (! $orderBy) {
+            $orderBy = $this->model->getTable().'.id';
         }
 
         return $this->model->orderBy($orderBy, $sortBy)->get($columns);
     }
-
 
     public function find(int $id): ?Model
     {
